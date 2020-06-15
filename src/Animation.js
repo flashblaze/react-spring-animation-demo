@@ -12,7 +12,11 @@ const Animation = () => {
   return (
     <div>
       {offset ? (
-        <Spring from={{ x: offset }} to={{ x: 0 }}>
+        <Spring
+          from={{ x: offset }}
+          to={{ x: 0 }}
+          config={{ tension: 4, friction: 0.5, precision: 0.1 }}
+        >
           {(props) => (
             <svg>
               <circle
